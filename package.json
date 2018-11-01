@@ -1,0 +1,33 @@
+{
+  "name": "query-string-extractor",
+  "version": "0.1.0",
+  "description": "Convert URL query strings into JS objects.",
+  "main": "query-string-extractor.js",
+  "scripts": {
+    "test": "jest",
+    "tdd": "jest --bail --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mazuh/query-string-parser.git"
+  },
+  "keywords": [
+    "url",
+    "query",
+    "parser",
+    "object",
+    "location"
+  ],
+  "author": "Marcell \"Mazuh\" Guilherme Costa da Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mazuh/query-string-parser/issues"
+  },
+  "homepage": "https://github.com/Mazuh/query-string-parser#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "lodash.reduce": "^4.6.0"
+  }
+}
