@@ -1,8 +1,14 @@
 const reduce = require('lodash/reduce');
 
-exports.extractQueryParams = (search) => {
-  return reduce(search || window.location.search, (state, char) => {
-    if (char === '&' || char === '?') {
+exports.extractQueryParams = (search=window.location.search) => {
+  return reduce(search, (state, char, index) => {
+    if (index === (search.length - 1) && state.buffer.value) {
+      const result = {
+        ...state.result,
+        [state.buffer.key]: state.buffer.value + char,
+      };
+      return { result };
+    } if (char === '&' || char === '?') {
       const buffer = { key: '', value: '' };
       const reading = 'key';
       const result = char === '&' ? {
