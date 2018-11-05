@@ -1,6 +1,6 @@
 {
   "name": "query-string-extractor",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Convert URL query strings into JS objects.",
   "main": "query-string-extractor.js",
   "scripts": {
