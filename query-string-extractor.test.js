@@ -5,6 +5,9 @@ it('extracts a simple search string', () => {
     a: '123',
     b: 'letter',
   });
+  expect(extractQueryParams('?a=b')).toEqual({
+    a: 'b',
+  });
 });
 
 it('works for a weird query string like a google search', () => {
@@ -28,5 +31,10 @@ it('will not have problems receiving an entire basic url', () => {
   expect(extractQueryParams('https://localhost:9000/#/dialer/?q=123&t=true')).toEqual({
     q: '123',
     t: 'true',
+  });
+  
+  expect(extractQueryParams('https://localhost:9000/#/dialer/?q=123&t=t')).toEqual({
+    q: '123',
+    t: 't',
   });
 });

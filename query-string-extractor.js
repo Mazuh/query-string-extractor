@@ -2,7 +2,7 @@ const reduce = require('lodash/reduce');
 
 exports.extractQueryParams = (search=window.location.search) => {
   return reduce(search, (state, char, index) => {
-    if (index === (search.length - 1) && state.buffer.value) {
+    if (index === (search.length - 1) && (state.reading === 'value' || state.buffer.value)) {
       const result = {
         ...state.result,
         [state.buffer.key]: state.buffer.value + char,
