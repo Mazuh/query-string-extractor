@@ -2,7 +2,7 @@
   "name": "query-string-extractor",
   "version": "1.1.0",
   "description": "Convert URL query strings into JS objects.",
-  "main": "query-string-extractor.js",
+  "main": "dist/query-string-extractor.js",
   "scripts": {
     "test": "jest",
     "tdd": "jest --bail --watch"
@@ -28,6 +28,10 @@
     "jest": "^23.6.0"
   },
   "dependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-stage-0": "^7.0.0",
     "lodash.reduce": "^4.6.0"
   }
 }
